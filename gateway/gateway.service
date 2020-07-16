@@ -1,0 +1,13 @@
+[Unit]
+Description=LiveSwitch Gateway
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/liveswitch/gateway
+ExecStart=/usr/bin/dotnet /opt/liveswitch/gateway/FM.LiveSwitch.Gateway.Core.dll
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

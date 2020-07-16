@@ -1,0 +1,14 @@
+﻿{
+  "ConnectionStrings": {
+    "Default": "127.0.0.1"
+  },
+  "Region": "",
+  "Internal": {
+    "IPAddresses": []
+  },
+  "External": {
+    "IPAddresses": [],
+    "PublicIPAddress": "",
+    "PublicHostname": ""
+  }
+}

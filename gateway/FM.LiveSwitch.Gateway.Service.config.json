@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {
+    "Default": "127.0.0.1"
+  },
+  "TrustedServerCertificateSha1Fingerprints": [],
+  "Admin": {
+    "IPAddresses": []
+  },
+  "Sync": {
+    "IPAddresses": []
+  }
+}

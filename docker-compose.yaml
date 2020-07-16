@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  redis:
+    container_name: lv_redis
+    image: redis:6.0.5-alpine
+    volumes:
+      - ./redis_data:/data
+
+  liveswitch:
+    container_name: lv_server
+    build: .
+    #restart: on-failure
+    #env_file: .env
+    depends_on: 
+      - redis
+    ports:
+      - "9090:9090"
+      - "8080:8080"
+      - "8443:8443"
+      #- "49152-65535/udp" 
+      - "8445:8445"
+      - "5060:5060"

@@ -1,0 +1,13 @@
+[Unit]
+Description=LiveSwitch Media Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/liveswitch/media-server
+ExecStart=/usr/bin/dotnet /opt/liveswitch/media-server/FM.LiveSwitch.MediaServer.Core.dll
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

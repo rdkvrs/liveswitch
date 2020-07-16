@@ -1,0 +1,13 @@
+[Unit]
+Description=LiveSwitch SIP Connector
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/liveswitch/sip-connector
+ExecStart=/usr/bin/dotnet /opt/liveswitch/sip-connector/FM.LiveSwitch.SipConnector.Core.dll
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
